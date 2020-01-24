@@ -20,6 +20,29 @@ class GuessedWords extends Component {
                     Try to guess the secret word!
                 </span>
             );
+        } else {
+            const guessedWordsRows = this.props.guessedWords.map(
+                (word, index) => (
+                    <tr data-test="guessed-word" key={index}>
+                        <td>{word.guessedWord}</td>
+                        <td>{word.letterMatchCount}</td>
+                    </tr>
+                )
+            );
+            this.contents = (
+                <div data-test="guessed-words">
+                    <h3>Guessed words</h3>
+                    <table>
+                        <th>
+                            <tr>
+                                <th>Guess</th>
+                                <th>Matching letters</th>
+                            </tr>
+                        </th>
+                        <tbody>{guessedWordsRows}</tbody>
+                    </table>
+                </div>
+            );
         }
         return <div data-test="component-guess-words">{this.contents}</div>;
     }
