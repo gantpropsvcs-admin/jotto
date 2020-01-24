@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Congrats extends Component {
+    propTypes = {
+        success: PropTypes.bool.isRequired,
+    };
+
     render() {
         if (this.props.success) {
             return (
