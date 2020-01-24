@@ -32,13 +32,13 @@ class GuessedWords extends Component {
             this.contents = (
                 <div data-test="guessed-words">
                     <h3>Guessed words</h3>
-                    <table>
-                        <th>
+                    <table className="table table-sm">
+                        <thead className="thead-light">
                             <tr>
                                 <th>Guess</th>
                                 <th>Matching letters</th>
                             </tr>
-                        </th>
+                        </thead>
                         <tbody>{guessedWordsRows}</tbody>
                     </table>
                 </div>

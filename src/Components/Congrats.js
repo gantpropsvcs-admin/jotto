@@ -9,7 +9,10 @@ class Congrats extends Component {
     render() {
         if (this.props.success) {
             return (
-                <div data-test="component-congrats">
+                <div
+                    data-test="component-congrats"
+                    className="alert alert-success"
+                >
                     <span data-test="congrats-message">
                         You guessed the word!
                     </span>
